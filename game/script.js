@@ -93,7 +93,6 @@ function update() {
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
             score += 0.5; //two pipes meaning score goes up by two after passing both top and bottom pipe
-            playSound();
             pipe.passed = true;
         }
 
@@ -184,9 +183,4 @@ function detectCollision (a, b) {
         a.y + a.height > b.y;
 }
 
-function playSound() {
-    let ding = new Audio;
-    ding.src = "/Project/media/ding.mp3" ;
-    ding.play;
-}
 
