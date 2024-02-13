@@ -50,16 +50,16 @@ window.onload = function () {
 
     //load images
     birdImg = new Image();
-    birdImg.src = "/Project/media/flappybird.png";
+    birdImg.src = "/Floppy-Burd/media/flappybird.png";
     birdImg.onload = function () { 
      context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
     }
 
     topPipeImg = new Image();
-    topPipeImg.src = "/Project/media/toppipe.png";
+    topPipeImg.src = "/Floppy-Burd/media/toppipe.png";
 
     bottomPipeImg = new Image ();
-    bottomPipeImg.src = "/Project/media/bottompipe.png";
+    bottomPipeImg.src = "/Floppy-Burd/media/bottompipe.png";
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
@@ -94,7 +94,6 @@ function update() {
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
             score += 0.5; //two pipes meaning score goes up by two after passing both top and bottom pipe
             pipe.passed = true;
-            window.playSound()
         }
 
         if (detectCollision(bird, pipe)) {
@@ -182,11 +181,5 @@ function detectCollision (a, b) {
         a.x + a.width > b.x &&
         a.y < b.y + b.height &&
         a.y + a.height > b.y;
-}
-
-function playSound() {
-    let ding = new Audio;
-    ding.src = "/Project/media/ding.mp3" ;
-    ding.play;
 }
 
