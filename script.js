@@ -173,6 +173,7 @@ function moveBird(e){
         }
 
     }
+    console.log(moveBird)
 }
 
 
