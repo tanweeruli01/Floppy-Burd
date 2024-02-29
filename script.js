@@ -63,8 +63,8 @@ window.onload = function () {
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
-    document.addEventListener("keydown", moveBird, moveBirdC);
-    
+    document.addEventListener("keydown", moveBird);
+    document.addEventListener("click", moveBird)
 
 }
 
@@ -160,7 +160,7 @@ function placePipes () {
 }
 
 function moveBird(e){
-    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyR") {
+    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyR" || e.type == "Click") {
         //jump
         velocityY = -6;
 
@@ -172,17 +172,6 @@ function moveBird(e){
             gameOver = false;
         }
 
-    }
-}
-function moveBirdC(e){
-    if (e.code == "Click"){
-        velocityY = -6;
-        if (gameOver){
-            bird.y = birdY;
-            pipeArray = [];
-            score = 0;
-            gameOver = false;
-        }
     }
 }
 
