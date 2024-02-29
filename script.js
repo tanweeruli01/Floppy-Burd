@@ -171,9 +171,9 @@ function moveBird(e){
             score = 0;
             gameOver = false;
         }
-
     }
-}
+    console.log("Clicked!")
+}   
 
 
 function detectCollision (a, b) {
