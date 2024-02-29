@@ -160,7 +160,7 @@ function placePipes () {
 }
 
 function moveBird(e){
-    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyR" || e.code == "click") {
+    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyR" || e.type == "click") {
         //jump
         velocityY = -6;
 
