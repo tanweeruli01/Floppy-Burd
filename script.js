@@ -160,7 +160,7 @@ function placePipes () {
 }
 
 function moveBird(e){
-    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyR" || e.code == "Click") {
+    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyR") {
         //jump
         velocityY = -6;
 
@@ -173,7 +173,17 @@ function moveBird(e){
         }
 
     }
+    if (e.code == "Click"){
+        velocityY = -6;
+        if (gameOver){
+            bird.y = birdY;
+            pipeArray = [];
+            score = 0;
+            gameOver = false;
+        }
+    }
 }
+
 
 
 function detectCollision (a, b) {
