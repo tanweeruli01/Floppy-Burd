@@ -64,7 +64,7 @@ window.onload = function () {
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
     document.addEventListener("keydown", moveBird);
-    document.addEventListener("click", moveBird)
+    document.addEventListener("click", moveBird);
 
 }
 
@@ -173,7 +173,6 @@ function moveBird(e){
         }
 
     }
-    console.log(moveBird)
 }
 
 
