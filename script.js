@@ -171,8 +171,8 @@ function moveBird(e){
             score = 0;
             gameOver = false;
         }
+        console.log("Clicked!")
     }
-    console.log("Clicked!")
 }   
 
 
